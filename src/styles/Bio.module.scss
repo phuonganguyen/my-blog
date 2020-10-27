@@ -1,0 +1,59 @@
+@use 'variables';
+
+.preview-shadow {
+    background-color: variables.$previewShadow;
+    max-width: 300px;
+    height: 180px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+.preview {
+    width: 300px;
+    border: 1.5px solid #17a2b8;
+    background-color: variables.$previewBg;
+    padding: 15px;
+    position: relative;
+}
+
+.corner {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid #17a2b8;
+    background-color: #fff;
+    position: absolute;
+
+    &.tl {
+        top: -5px;
+        left: -5px;
+    }
+
+    &.tr {
+        top: -5px;
+        right: -5px;
+    }
+
+    &.br {
+        bottom: -5px;
+        right: -5px;
+    }
+
+    &.bl {
+        bottom: -5px;
+        left: -5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .preview-shadow {
+        max-width: 280px;
+        height: 180px;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+
+    .preview {
+        width: 280px;
+    }
+}
