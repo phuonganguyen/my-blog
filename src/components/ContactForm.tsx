@@ -1,26 +1,77 @@
 import { FunctionComponent } from "react";
+import styled from "styled-components";
 
-import styles from "../styles/ContactForm.module.scss";
+const Title = styled.h3`
+    text-align: center;
+`;
+
+const Form = styled.form`
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid ${({ theme }) => theme.borderColor};
+    padding: 15px;
+    border-radius: 5px;
+    background-color: ${({ theme }) => theme.mainColor};
+    margin-bottom: 50px;
+
+    label {
+        line-height: 2.7em;
+    }
+`;
+
+const InputField = styled.input`
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: ${({ theme }) => theme.secondaryColor};
+    border-radius: 5px;
+    border: 1px solid ${({ theme }) => theme.borderColor};
+    font-size: 14px;
+`;
+
+const TextArea = styled.textarea`
+    min-height: 100px;
+    font-size: 14px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: ${({ theme }) => theme.secondaryColor};
+    border-radius: 5px;
+    border: 1px solid ${({ theme }) => theme.borderColor};
+    font-size: 14px;
+`;
+
+const Button = styled.input`
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    background-color: ${({ theme }) => theme.buttonColor};
+    border: none;
+    cursor: pointer;
+`;
 
 const ContactForm: FunctionComponent = () => {
     return (
         <>
-            <h3 className={styles.title}>Get In Touch</h3>
-            <form className={styles["contact-form"]}>
+            <Title>Get In Touch</Title>
+            <Form>
                 <label>Name</label>
-                <input className={styles["input-field"]} type="text" name="name" />
+                <InputField type="text" name="name" />
 
                 <label>Subject</label>
-                <input className={styles["input-field"]} type="text" name="subject" />
+                <InputField type="text" name="subject" />
 
                 <label>Email</label>
-                <input className={styles["input-field"]} type="text" name="email" />
+                <InputField type="text" name="email" />
 
                 <label>Message</label>
-                <textarea className={styles["input-field"]} name="message"></textarea>
+                <TextArea name="message"></TextArea>
 
-                <input className={styles["submit-btn"]} type="submit" value="Send" />
-            </form>
+                <Button type="submit" value="Send" />
+            </Form>
         </>
     );
 };

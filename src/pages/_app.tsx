@@ -7,7 +7,7 @@ import { dark, light } from "../styles/theme";
 
 function MyApp({ Component, pageProps }) {
     const [theme, toggleTheme, componentMounted] = useDarkMode();
-    const themeMode = theme === "light" ? light : dark;
+    const themeMode = theme === 'light' ? light : dark;
 
     if (!componentMounted) {
         return <div />;

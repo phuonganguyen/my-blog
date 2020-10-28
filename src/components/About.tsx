@@ -1,11 +1,34 @@
 import { FunctionComponent } from "react";
+import styled from "styled-components";
 
-import styles from "../styles/About.module.scss";
+const Wrapper = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding-bottom: 50px;
+    padding-top: 50px;
+    gap: 100px;
+`;
+
+const Skills = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    background-color: ${({ theme }) => theme.previewShadow};
+`;
+
+const Socials = styled.div`
+    display: grid;
+    align-content: center;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+`;
 
 const About: FunctionComponent = () => {
     return (
-        <div className={styles['about-wrapper']}>
-            <div className={styles['about-me']}>
+        <Wrapper>
+            <div>
                 <h4>More about me</h4>
                 <p>I build new projects just to tickle my brain and love teaching others how they're made.</p>
                 <p>While I keep busy teaching courses, I still take interviews in search of a great team & projects that interest me.</p>
@@ -17,7 +40,7 @@ const About: FunctionComponent = () => {
                         Download Resume
                     </a>
                 </p>
-                <div className={styles['skills']}>
+                <Skills>
                     <ul>
                         <li>Python</li>
                         <li>Django</li>
@@ -33,11 +56,11 @@ const About: FunctionComponent = () => {
                         <li>Heroku</li>
                         <li>HTML/CSS</li>
                     </ul>
-                </div>
+                </Skills>
             </div>
 
-            <div className={styles['social-links']}>
-                <img className={styles['social_img']} src="/images/follow.jpg" />
+            <Socials>
+                <img src="/images/follow.jpg" />
                 <h3>Find me on Twitter & Youtube</h3>
 
                 <a target="_blank" href="https://www.youtube.com/c/dennisivy">
@@ -47,8 +70,8 @@ const About: FunctionComponent = () => {
                 <a target="_blank" href="https://twitter.com/dennisivy11">
                     Twitter: @DennisIvy11
                 </a>
-            </div>
-        </div>
+            </Socials>
+        </Wrapper>
     );
 };
 

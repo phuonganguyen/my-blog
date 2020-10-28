@@ -7,7 +7,9 @@ export const light = {
     themeDotBorder: '#24292e',
     previewBg: 'rgb(251, 249, 243, 0.8)',
     previewShadow: '#f0ead6',
-    buttonColor: 'black'
+    buttonColor: 'black',
+    toggleBorder: '#fff',
+    gradient: 'linear-gradient(#39598A, #79D7ED)',
 };
 
 export const dark = {
@@ -19,5 +21,7 @@ export const dark = {
     themeDotBorder: '#FFF',
     previewBg: 'rgb(25, 39, 52, 0.8)',
     previewShadow: '#111921',
-    buttonColor: '#17a2b8'
-}
+    buttonColor: '#17a2b8',
+    toggleBorder: '#6B8096',
+    gradient: 'linear-gradient(#091236, #1E215D)',
+};
