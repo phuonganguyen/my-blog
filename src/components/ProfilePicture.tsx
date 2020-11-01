@@ -12,7 +12,7 @@ const Image = styled.img`
 `;
 
 const ProfilePicture: FunctionComponent = () => {
-    return <Image src="/images/Dennis.jpg" />;
+    return <Image src="/images/profile.jpg" />;
 };
 
 export default ProfilePicture;

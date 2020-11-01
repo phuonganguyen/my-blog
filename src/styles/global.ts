@@ -72,9 +72,12 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0 auto;
     }
 
+    .hidden {
+        display: none;
+    }
+
     @media screen and (max-width: 1200px) {
         .main-container {
             width: 95%;
         }
     }`;
-
