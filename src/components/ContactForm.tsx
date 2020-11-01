@@ -57,7 +57,7 @@ const ContactForm: FunctionComponent = () => {
     return (
         <>
             <Title>Get In Touch</Title>
-            <form name="contact" method="POST" data-netlify="true">
+            <form name="contact" action="/success" method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
 
                 <label htmlFor="name">Name</label>
