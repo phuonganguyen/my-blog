@@ -57,7 +57,7 @@ const ContactForm: FunctionComponent = () => {
     return (
         <>
             <Title>Get In Touch</Title>
-            <Form name="contact" method="POST" data-netlify="true">
+            <form name="contact" method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
 
                 <label htmlFor="name">Name</label>
@@ -73,7 +73,7 @@ const ContactForm: FunctionComponent = () => {
                 <TextArea name="message" id="message"></TextArea>
 
                 <Button type="submit" value="Send" />
-            </Form>
+            </form>
         </>
     );
 };
