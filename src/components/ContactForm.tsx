@@ -57,26 +57,20 @@ const ContactForm: FunctionComponent = () => {
     return (
         <>
             <Title>Get In Touch</Title>
-            <Form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
-                {/* <input type="hidden" name="form-name" value="contact" />
-                <p className="hidden">
-                    <label>
-                        Don’t fill this out if you're human: <input name="bot-field" />
-                    </label>
-                </p> */}
-                <label>Name</label>
-                <InputField type="text" name="name" />
+            <Form name="contact" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
 
-                <label>Subject</label>
-                <InputField type="text" name="subject" />
+                <label htmlFor="name">Name</label>
+                <InputField type="text" name="name" id="name" />
 
-                <label>Email</label>
-                <InputField type="text" name="email" />
+                <label htmlFor="subject">Subject</label>
+                <InputField type="text" name="subject" id="subject" />
 
-                <label>Message</label>
-                <TextArea name="message"></TextArea>
+                <label htmlFor="email">Email</label>
+                <InputField type="text" name="email" id="email" />
 
-                <div data-netlify-recaptcha="true"></div>
+                <label htmlFor="message">Message</label>
+                <TextArea name="message" id="message"></TextArea>
 
                 <Button type="submit" value="Send" />
             </Form>
